@@ -1,0 +1,94 @@
+.main-contact {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+
+  background-image: url("https://i.ibb.co/7drwxYbK/35250.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: block;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.text-contact > p {
+  font-weight: 600;
+}
+
+.contact-left {
+  flex: 1;
+  color: #ffffff;
+}
+.contact-right {
+  flex: 1;
+}
+
+/* Overlay */
+.main-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.form-contact,
+.contact-left,
+.contact-right {
+  position: relative;
+  z-index: 1;
+}
+
+/* Input styling */
+.custom-form .ant-input,
+.custom-form .ant-input-textarea {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.send-button {
+  background: transparent !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-contact {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .contact-left h1 {
+    font-size: 28px;
+  }
+  .contact-left p {
+    font-size: 16px;
+  }
+}
