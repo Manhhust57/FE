@@ -1,0 +1,422 @@
+/* Policy.css */
+
+.policy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.policy-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.policy-header h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.policy-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Policy Content */
+.policy-content {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Section Styles */
+.policy-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #667eea;
+}
+
+.policy-section:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.section-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Policy Cards */
+.policy-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.policy-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #495057;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.policy-card-title .icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Policy Grid */
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+    padding-left: 25px;
+}
+
+.policy-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.policy-list li:last-child {
+    border-bottom: none;
+}
+
+/* Time Info */
+.time-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.time {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    margin: 0 10px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Children Policy */
+.children-policy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.age-group {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #17a2b8;
+}
+
+.age-group h3 {
+    color: #17a2b8;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Bed Policy */
+.bed-policy {
+    margin-bottom: 20px;
+}
+
+.age-category {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.age-category h3 {
+    color: #6f42c1;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.bed-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bed-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.bed-list li:last-child {
+    border-bottom: none;
+}
+
+.bed-type {
+    font-weight: 500;
+    color: #495057;
+}
+
+.price {
+    font-weight: 600;
+    color: #dc3545;
+    background: #fff5f5;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #fecaca;
+}
+
+/* Tags */
+.free-tag {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.highlight {
+    background: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #856404;
+    font-weight: 600;
+}
+
+/* Payment Cards */
+.payment-cards p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-item {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Notes and Warnings */
+.policy-note {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 4px solid #17a2b8;
+}
+
+.policy-note p {
+    margin: 0;
+    color: #0c5460;
+}
+
+.policy-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+}
+
+.policy-warning strong {
+    color: #533f03;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .policy-container {
+        width: 92%;
+        padding: 1px;
+        margin-top: 100px;
+        /* Tăng margin-top cho mobile */
+    }
+
+    .policy-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .policy-section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .section-icon {
+        margin-right: 0;
+    }
+
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .children-policy {
+        grid-template-columns: 1fr;
+    }
+
+    .bed-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .card-list {
+        justify-content: center;
+    }
+
+    .time-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-container {
+        margin-top: 100px;
+        /* Tăng thêm cho mobile nhỏ */
+    }
+
+    .policy-header {
+        padding: 20px 15px;
+    }
+
+    .policy-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .policy-section {
+        padding: 15px;
+    }
+
+    .policy-card {
+        padding: 15px;
+    }
+
+    .age-category {
+        padding: 12px;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .card-item {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation */
+.policy-container {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+    padding-top: 50px;
+    /* Điều chỉnh theo height của header */
+}
+
+/* Hoặc cho main content container */
+.main-content {
+    padding-top: 50px;
+}

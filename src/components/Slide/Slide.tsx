@@ -22,10 +22,15 @@ const Slide = () => {
         {/* Thanh tìm kiếm được đặt ở giữa */}
         <div className="slider-search-container">
           <div className="search-title">
-            <h3>Tìm Kiếm Chỗ Ở Lý Tưởng</h3>
+            <a href="/booking" className="btn-booking">
+               Đặt phòng Tại đây
+            </a>
           </div>
-          <BoxSearch />
+          {/* <BoxSearch /> */}
         </div>
+
+
+
       </div>
     </div>
   );

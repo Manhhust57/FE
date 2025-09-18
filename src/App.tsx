@@ -32,6 +32,8 @@ import ChamSoc from "./pages/ChinhSach/ChamSoc/ChamSoc.tsx";
 import HopTac from "./pages/ChinhSach/HopTac/HopTac.tsx";
 import BlogUser from "./pages/BlogUser/BlogUser.tsx";
 import ExploSub from "./components/ExploExperSub/ExploSub";
+import Policy from "./components/Policy/Policy.tsx";
+import Contact from "./components/Contact/Contact.tsx";
 function App() {
   return (
     <AuthProvider>
@@ -48,38 +50,31 @@ function App() {
               </MainLayout>
             }
           />
+          
           <Route
-            path="/tour-ha-noi"
+            path="/policy"
             element={
               <MainLayout>
-                <Tour />
+                <Policy />
               </MainLayout>
             }
           />
-          <Route
-            path="/tour-ha-long"
-            element={
-              <MainLayout>
-                <Tour />
-              </MainLayout>
-            }
-          />
-          <Route
+          {/* <Route
             path="/tour-ha-noi/:tourName/view"
             element={
               <MainLayout>
                 <TourDetail />
               </MainLayout>
             }
-          />
+          />*/}
           <Route
-            path="/tour-ha-long/:tourName/view"
+            path="/contact"
             element={
               <MainLayout>
-                <TourDetail />
+                <Contact />
               </MainLayout>
             }
-          />
+          /> 
           <Route
             path="/apartment-ha-noi"
             element={
@@ -179,10 +174,10 @@ function App() {
             }
           />
           <Route
-            path="/coperate"
+            path="/booking"
             element={
               <MainLayout>
-                <Coperate />
+                <Blog />
               </MainLayout>
             }
           />

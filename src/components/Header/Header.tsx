@@ -157,45 +157,26 @@ const Header: React.FC = () => {
   const items: MenuItem[] = [
     {
       key: "1",
-      label: "Ha Noi",
-      children: [
-        {
-          key: "1-1",
-          label: (
-            <Link to="/tour-ha-noi" state={{ location: "HA_NOI" }}>
-              Tour Hà Nội
-            </Link>
-          ),
-        },
-        {
-          key: "hn-apartment",
-          label: "Căn hộ Hà Nội",
-          children: loading.hn
-            ? [{ key: "hn-loading", label: <Spin size="small" /> }]
-            : hnApartments,
-        },
-      ],
+      label:  (
+        <Link to="/chinh-sach-bao-mat" state={{ location: "HA_NOI" }}>
+          Chính Sách Bảo Mật
+        </Link>
+      ), 
+      
     },
     {
       key: "2",
-      label: "Ha Long",
-      children: [
-        {
-          key: "2-1",
-          label: (
-            <Link to="/tour-ha-long" state={{ location: "HA_LONG" }}>
-              Tour Hạ Long
-            </Link>
-          ),
-        },
-        {
-          key: "hl-apartment",
-          label: "Căn hộ Hạ Long",
-          children: loading.hl
-            ? [{ key: "hl-loading", label: <Spin size="small" /> }]
-            : hlApartments,
-        },
-      ],
+      label: <Link to="/chuong-trinh-hop-tac" state={{ location: "HA_NOI" }}>
+        Chương Trình Hợp Tác
+      </Link>
+      
+    },
+    {
+      key: "3",
+      label: <Link to="/cham-soc-khach-hang" state={{ location: "HA_NOI" }}>
+        Chăm Sóc Khách Hàng
+      </Link>
+      
     },
   ];
 
@@ -230,15 +211,13 @@ const Header: React.FC = () => {
             <div className="header-select">
               <div className="select-nav">
                 <CircleHelp size={18} className="header-icon" />
-                <Link to="/help">Trợ giúp</Link>
+                <Link to="/contact">Liên Hệ</Link>
               </div>
+              
+              
               <div className="select-nav">
                 <Earth size={18} className="header-icon" />
-                <Link to="#">Ngôn ngữ</Link>
-              </div>
-              <div className="select-nav">
-                <HelpCircle size={19} color="#555" />
-                <Link to="/support">Hướng dẫn</Link>
+                <Link to="">Ngôn Ngữ</Link>
               </div>
               <div
                 className={`user-menu ${userMenuActive ? "active" : ""}`}
@@ -287,111 +266,14 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="header-nav">
-              <div
-                className={
-                  isMobile ? "dropdown-container mobile" : "dropdown-container"
-                }
-              >
-                {isMobile ? (
-                  <div className="dropdown-mobile">
-                    <button
-                      onClick={() => setOpen(!open)}
-                      className="dropdown-btn"
-                    >
-                      Tour và căn hộ <DownOutlined />
-                    </button>
-
-                    {open && (
-                      <div className="dropdown-wrapper">
-                        <ul className="dropdown-menu">
-                          {items.map((item) => (
-                            <li key={item.key} className="dropdown-item">
-                              <button
-                                className="dropdown-submenu-btn"
-                                onClick={() =>
-                                  setOpenMenu1(
-                                    openMenu1 === item.key ? null : item.key
-                                  )
-                                }
-                              >
-                                {item.label} <DownOutlined />
-                              </button>
-
-                              {openMenu1 === item.key && (
-                                <ul className="dropdown-submenu">
-                                  {item.children?.map((subItem) => (
-                                    <li
-                                      key={subItem.key}
-                                      className="dropdown-submenu-item"
-                                    >
-                                      {subItem.children ? (
-                                        <>
-                                          <button
-                                            className="dropdown-submenu-btn"
-                                            onClick={() =>
-                                              setOpenMenu2(
-                                                openMenu2 === subItem.key
-                                                  ? null
-                                                  : subItem.key
-                                              )
-                                            }
-                                          >
-                                            {subItem.label} <DownOutlined />
-                                          </button>
-
-                                          {openMenu2 === subItem.key && (
-                                            <ul className="dropdown-submenu">
-                                              {subItem.children.map((child) => (
-                                                <li
-                                                  key={child.key}
-                                                  className="dropdown-submenu-item"
-                                                  onClick={() =>
-                                                    setNavActive(false)
-                                                  }
-                                                >
-                                                  {child.label}
-                                                </li>
-                                              ))}
-                                            </ul>
-                                          )}
-                                        </>
-                                      ) : (
-                                        <div onClick={() => setNavActive(false)}>
-                                          {subItem.label}
-                                        </div>
-                                      )}
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Dropdown
-                    menu={{ items }}
-                    trigger={["hover"]}
-                    placement="bottomLeft"
-                  >
-                    <a className="dropdown-link">
-                      <Space>
-                        Tour và căn hộ
-                        <DownOutlined />
-                      </Space>
-                    </a>
-                  </Dropdown>
-                )}
-              </div>
+              
               {/* Links có hiệu ứng active */}
               <Link
-                to="/coperate"
+                to="/booking"
                 onClick={() => setNavActive(false)}
-                className={location.pathname === "/coperate" ? "active" : ""}
+                className={location.pathname === "/phong" ? "active" : ""}
               >
-                Hợp tác
+                Đặt Phòng
               </Link>
               <Link
                 to="/about-us"
@@ -401,13 +283,15 @@ const Header: React.FC = () => {
                 Thông tin về chúng tôi
               </Link>
               <Link
-                to="/blog"
+                to="/policy"
                 onClick={() => setNavActive(false)}
-                className={location.pathname === "/blog" ? "active" : ""}
+                className={
+                  location.pathname === "/explore&chinhsach" ? "active" : ""
+                }
               >
-                Blog
+                Chính Sách
               </Link>
-              <Link
+              {/* <Link
                 to="/explore&experience"
                 onClick={() => setNavActive(false)}
                 className={
@@ -415,7 +299,7 @@ const Header: React.FC = () => {
                 }
               >
                 Khám phá & Trải nghiệm
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

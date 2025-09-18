@@ -197,7 +197,7 @@ const Home: React.FC = () => {
       <Should />
       <Review />
       <div style={{ marginTop: '20px' }}></div>
-      <Contact />
+      
       <Mapcty />
       <ScrollToTopButton showAt={1000} />
     </div>
