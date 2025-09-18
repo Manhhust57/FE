@@ -16,7 +16,7 @@ import Coperate from "./components/Coperate/Coperate";
 import { AuthProvider } from "./Context/AuthContext";
 import ExploExper from "./components/ExploExper/ExploExper";
 import DashBroad from "./components/DashBroad/DashBroad";
-import Blog from "./components/Blog/Blog.tsx";
+import Blog from "./components/bookroom/bookroom.tsx";
 import ScrollToTop from "./components/ScrollToTop/SrcollToTop";
 import Culture from "./components/AboutList/Aboutculture/Culture";
 import Support from "./components/Support/Support";
@@ -34,6 +34,7 @@ import BlogUser from "./pages/BlogUser/BlogUser.tsx";
 import ExploSub from "./components/ExploExperSub/ExploSub";
 import Policy from "./components/Policy/Policy.tsx";
 import Contact from "./components/Contact/Contact.tsx";
+import About from "./pages/About/about.tsx";
 function App() {
   return (
     <AuthProvider>
@@ -130,6 +131,14 @@ function App() {
             element={
               <MainLayout>
                 <Help />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <MainLayout>
+                <About />
               </MainLayout>
             }
           />

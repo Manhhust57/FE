@@ -276,9 +276,9 @@ const Header: React.FC = () => {
                 Đặt Phòng
               </Link>
               <Link
-                to="/about-us"
+                to="/about"
                 onClick={() => setNavActive(false)}
-                className={location.pathname === "/about-us" ? "active" : ""}
+                className={location.pathname === "/about" ? "active" : ""}
               >
                 Thông tin về chúng tôi
               </Link>
