@@ -271,7 +271,7 @@ const Header: React.FC = () => {
               <Link
                 to="/booking"
                 onClick={() => setNavActive(false)}
-                className={location.pathname === "/phong" ? "active" : ""}
+                className={location.pathname === "/booking" ? "active" : ""}
               >
                 Đặt Phòng
               </Link>

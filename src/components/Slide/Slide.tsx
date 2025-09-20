@@ -7,7 +7,16 @@ const Slide = () => {
   return (
     <div className="slider-container">
       <div className="slider-image">
-        <img src={img1} alt="ANSTAY" />
+        <video
+          src="/videos/anstay.mp4"  // Không cần 'public/'
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="slider-video"
+          
+        />
       </div>
       
       <div className="slider-dark-overlay">

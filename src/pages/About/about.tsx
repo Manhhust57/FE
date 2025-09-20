@@ -1,6 +1,7 @@
 // About.tsx - Trang giới thiệu
 import React from 'react';
 import './About.css';
+import { Link } from 'react-router-dom';
 
 interface AboutProps {
     className?: string;
@@ -25,6 +26,10 @@ const About: React.FC<AboutProps> = ({ className }) => {
         { icon: '🚿', name: 'Nhà vệ sinh riêng' },
         { icon: '🚭', name: 'Tất cả khu vực công cộng đều không hút thuốc' }
     ];
+
+    function setNavActive(arg0: boolean): void {
+        throw new Error('Function not implemented.');
+    }
 
     return (
         <div className={`about-container ${className || ''}`}>
@@ -130,7 +135,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 </section>
 
                 {/* Contact Info */}
-                <section className="contact-info-section">
+                {/* <section className="contact-info-section">
                     <div className="contact-card">
                         <h3>
                             <span className="contact-icon">📍</span>
@@ -156,7 +161,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* CTA Section */}
                 <section className="cta-section">
@@ -166,7 +171,14 @@ const About: React.FC<AboutProps> = ({ className }) => {
                         <div className="cta-buttons">
                             <button className="cta-button primary">
                                 <span>🏨</span>
-                                Đặt phòng ngay
+                                <Link
+                                                to="/booking"
+                                                onClick={() => setNavActive(false)}
+                                                className={location.pathname === "/booking" ? "active" : ""}
+                                              >
+                                                 Đặt phòng ngay
+                                              </Link>
+                                
                             </button>
                             <button className="cta-button secondary">
                                 <span>📞</span>

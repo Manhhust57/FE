@@ -15,6 +15,8 @@ import Mapcty from "../../components/Mapcty/Mapcty";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 import Should from "../../components/Should/Should";
 import Slide from "../../components/Slide/Slide";
+import { T } from "vitest/dist/chunks/reporters.d.BFLkQcL6.js";
+import TopicBlog from "../../components/TopicBlog/TopicBlog";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -195,6 +197,7 @@ const Home: React.FC = () => {
       <Slide />
       <Event />
       <Should />
+      <TopicBlog />
       <Review />
       <div style={{ marginTop: '20px' }}></div>
       
